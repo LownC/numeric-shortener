@@ -29,3 +29,5 @@ DO migration·SQLite 상태는 코드 버전과 별개입니다. 이전 코드 �
 Cloudflare Free의 Workers·SQLite DO 무료 범위를 사용합니다. 한도에 도달하면 실패·제한될 수 있으며 유료 전환을 자동 승인하지 않습니다. Railway Trial 크레딧과 기간은 계정에서 확인해야 합니다. 월 무료 크레딧만으로 서버+DB 상시 실행을 보장하지 않습니다. 생성 API가 닫혀도 기존 서버·DB·볼륨은 비용을 소비할 수 있습니다.
 
 공식 확인: [Workers 요금](https://developers.cloudflare.com/workers/platform/pricing/), [SQLite DO 요금](https://developers.cloudflare.com/durable-objects/platform/pricing/), [Railway Trial](https://docs.railway.com/pricing/free-trial), [Railway Project Token](https://docs.railway.com/integrations/api).
+
+Railway 공식 Trial 정책은 최초 $5/30일,이후 Free 월 $1이며 잔액은 이월되지 않습니다. Trial 계정의 stateful volume은 크레딧 만료 후30일에 삭제될 수 있으므로 영구 데이터 보존을 보장하지 않습니다. 공개 생성 요청 제한도 서버·DB 상시 비용과 볼륨 사용량의 절대 상한을 보장하지 않습니다. 무료 조건으로 장기 운영이 가능하다고 가정하지 마세요. [Railway 공식 Trial 정책](https://docs.railway.com/pricing/free-trial)
