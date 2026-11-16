@@ -1,0 +1,16 @@
+{
+  "name": "numeric-shortener-edge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.worker.json --noEmit && tsc -p tsconfig.railway.json",
+    "test:worker": "tsc -p tsconfig.worker.json && node --test edge/*.test.mjs"
+  },
+  "devDependencies": {
+    "@railway/cli": "5.71.0",
+    "@types/node": "24.10.1",
+    "railway": "3.16.0",
+    "typescript": "7.0.2",
+    "wrangler": "4.160.0"
+  }
+}

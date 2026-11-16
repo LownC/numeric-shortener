@@ -1,0 +1,7 @@
+# Production root configuration remains closed. The local helper generates
+# private per-profile .dev.vars under ignored work/m4a-worker/.
+UPSTREAM_ORIGIN=http://127.0.0.1:18081
+LOCAL_DEV=true
+CREATE_URLS_ENABLED=false
+PROXY_SHARED_SECRET=
+UPSTREAM_TIMEOUT_MS=5000

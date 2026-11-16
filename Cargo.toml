@@ -1,0 +1,22 @@
+[package]
+name = "numeric-shortener"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+dioxus = { version = "=0.7.10", features = ["fullstack"] }
+serde = { version = "1", features = ["derive"] }
+url = "=2.5.8"
+tokio = { version = "1", features = ["time", "sync", "signal", "net", "rt-multi-thread", "macros"], optional = true }
+sqlx = { version = "=0.8.6", default-features = false, features = ["runtime-tokio", "tls-rustls-ring", "postgres"], optional = true }
+subtle = { version = "=2.6.1", optional = true }
+
+[features]
+default = []
+web = ["dioxus/web"]
+server = ["dioxus/server", "dep:tokio", "dep:sqlx", "dep:subtle"]
+
+[profile.release]
+opt-level = "s"
+lto = "thin"

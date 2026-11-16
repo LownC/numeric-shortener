@@ -1,0 +1,13 @@
+# LEGACY REFERENCE ONLY, verified 2026-11-11.
+# New Railway services do not consume Config as Code; existing support ends 2026-12-01.
+# Current declarative template: .railway/railway.ts. No plan/apply/deploy was run.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/healthz"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+# Docker CMD and injected PORT are used; no migration/admin start command.

@@ -1,0 +1,6 @@
+[application]
+name = "numeric-shortener"
+default_platform = "web"
+
+[web.app]
+title = "숫자 URL 서비스"
