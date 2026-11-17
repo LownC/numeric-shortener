@@ -10,6 +10,8 @@
 6. Worker를 먼저 false로 닫고 Railway도 false로 설정합니다. 설정 변경은 재빌드를 유발할 수 있어 새 deployment SUCCESS와 실제403을 모두 확인합니다.
 7. 임시 키를 폐기하고 기존·추가 매핑 및 잔액을 확인합니다. 장기 공개 생성은 별도 결정입니다.
 
+2026-11-17 최종 제출용 공개 생성은 별도 사용자 승인을 받아 활성화했고 검증 후 임시 키 두 개를 폐기했습니다. 현재는 자동 재차단 없이 공개 상태를 유지합니다. 위 순서는 제한 검증의 기본 절차이며, 저장소의 생성 false 기본값과 현재 운영의 승인된 true 설정을 구분해야 합니다. 새 배포에서 공개 상태를 임의로 바꾸지 않습니다. 장애 시에는 아래 복구 절차에 따라 Worker를 먼저 차단합니다.
+
 ## 운영 환경
 
 Rust: IP=0.0.0.0, Railway PORT, APP_ENV=production, 제한 앱 DATABASE_URL, Cloudflare PUBLIC_BASE_URL, CREATE_URLS_ENABLED=false, 공유 PROXY_SHARED_SECRET. RAILWAY_DEPLOYMENT_DRAINING_SECONDS=10.
